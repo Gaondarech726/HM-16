@@ -1,0 +1,247 @@
+header {
+  height: 783px;
+  background: #f2f3f6;
+
+  .hero {
+    position: relative;
+    @include flexCenter();
+    flex-direction: column;
+
+    & > img {
+      width: 252.45px;
+      height: 258.65px;
+    }
+    .hero-text {
+      @include flexCenter();
+      flex-direction: column;
+
+      h2 {
+        @include textStyle(900, 24px, 29px);
+        color: #111238;
+        width: 235px;
+        text-align: center;
+        padding-bottom: 20px;
+      }
+      & > p {
+        @include textStyle(400, 16px, 22px);
+        width: 290px;
+        text-align: center;
+        color: #111238;
+        padding-bottom: 29px;
+      }
+
+      form {
+        position: relative;
+        width: 290px;
+        height: 70px;
+        background: #ffffff;
+        border: 1px solid rgba(209, 209, 209, 0.1);
+        box-shadow: 0px 4px 25px rgba(15, 17, 56, 0.1);
+        border-radius: 5px;
+        overflow: hidden;
+
+        input {
+          width: 100%;
+          height: 100%;
+          border: none;
+          outline: none;
+          box-sizing: border-box;
+          padding: 25px 0 25px 25px;
+          @include textStyle(400, 16px, 19px);
+        }
+        input::-webkit-input-placeholder {
+          color: #b2b2b2;
+        }
+
+        button {
+          position: absolute;
+          top: 13px;
+          right: 10px;
+          background: #1a75e8;
+          width: 68.44px;
+          height: 45px;
+          border-radius: 5px;
+          border: none;
+          outline: none;
+        }
+
+        margin-bottom: 20px;
+      }
+
+      .example {
+        margin-bottom: 55px;
+        @include textStyle(400, 14px, 17px);
+        color: #b2b2b2;
+        width: 259px;
+        height: 59px;
+        text-align: center;
+
+        ul {
+          display: flex;
+          justify-content: space-between;
+
+          li {
+            border: 1px solid #b2b2b2;
+            padding: 5px 10px;
+            border-radius: 5px;
+          }
+        }
+        & > p {
+          @include textStyle(400, 14px, 17px);
+          color: #b2b2b2;
+          width: auto;
+          padding-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  button {
+    p {
+      display: none;
+    }
+  }
+}
+
+header {
+  padding-top: 29px;
+  menu {
+    margin: 0 15px 44px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      width: 90px;
+    }
+    a {
+      height: 20.54px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    nav {
+      .menu {
+        display: none;
+      }
+
+      label {
+        display: block;
+        width: 24px;
+        height: 16px;
+        position: relative;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        span {
+          top: 8px;
+        }
+
+        span,
+        span::before,
+        span::after {
+          content: "";
+          display: block;
+          width: 24px;
+          height: 2px;
+          background: #111238;
+          position: absolute;
+          right: 0;
+          transition: 0.3s;
+        }
+
+        span::before {
+          top: -4px;
+        }
+
+        span::after {
+          top: 4px;
+        }
+      }
+
+      input[type="checkbox"]:checked ~ label span {
+        transform: rotate(-45deg);
+      }
+
+      input[type="checkbox"]:checked ~ label span:before {
+        transform: rotate(0deg);
+        top: 0px;
+      }
+
+      input[type="checkbox"]:checked ~ label span:after {
+        transform: rotate(90deg);
+        top: 0px;
+      }
+
+      input {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    input[type="checkbox"]:checked ~ .menu {
+      display: flex;
+      justify-content: center;
+    }
+    menu {
+      background: #f2f3f6;
+      ul {
+        padding-right: 65px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        li {
+          padding: 0 0 25px 0;
+          &:hover {
+            color: #1a75e8;
+          }
+        }
+      }
+      .join-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        button {
+          &:first-of-type {
+            @include textStyle(400, 16px, 19px);
+            margin-bottom: 15px;
+            color: #111238;
+            border: none;
+            background: #ddd1d1;
+            border-radius: 5px;
+            padding: 15px 46px;
+          }
+
+          &:nth-of-type(2) {
+            color: #ffffff;
+            @include textStyle(400, 16px, 19px);
+            padding: 15px 30px;
+            background: #1a75e8;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 25px;
+          }
+        }
+      }
+    }
+    .menu {
+      position: absolute;
+      left: 0;
+      top: 70px;
+      box-shadow: 0 12px 8px #f2f3f6;
+      background: #f2f3f6;
+      width: 390px;
+      height: 341px;
+      z-index: 1;
+    }
+  }
+}

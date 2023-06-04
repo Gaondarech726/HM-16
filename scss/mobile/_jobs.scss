@@ -1,0 +1,100 @@
+.jobs {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  & * {
+    box-sizing: border-box;
+  }
+
+  & > h3 {
+    @include textStyle(700, 18px, 22px);
+    color: #111238;
+    text-align: center;
+    padding-bottom: 40px;
+  }
+
+  .vacancies-cards {
+    width: 290px;
+    height: 1824px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .card {
+      margin-bottom: 15px;
+      height: 441px;
+      @include BorderStyle(#c5c9d5, 1px, solid, 10px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      padding: 30px 0;
+
+      & > img {
+        margin-bottom: 30px;
+      }
+
+      .title {
+        text-align: center;
+        margin-bottom: 30px;
+        h2 {
+          @include textStyle(700, 16px, 19px);
+          color: #111238;
+          padding-bottom: 10px;
+        }
+        p {
+          @include textStyle(400, 14px, 17px);
+          color: #111238;
+        }
+      }
+      button {
+        @include textStyle(700, 16px, 19px);
+        color: white;
+        background: #1a75e8;
+        border-radius: 5px;
+        border: none;
+        padding: 10px 25px;
+        margin-bottom: 30px;
+      }
+      .stack {
+        margin-bottom: 35px;
+        & > ul {
+          margin-top: 15px;
+          width: 183px;
+          height: 27px;
+          display: flex;
+          justify-content: space-between;
+        }
+        p {
+          @include textStyle(400, 14px, 17px);
+          text-align: center;
+          color: #b2b2b2;
+        }
+        li {
+          @include textStyle(400, 14px, 17px);
+          @include BorderStyle(#b2b2b2, 1px, solid, 5px);
+          padding: 5px 10px;
+          color: #b2b2b2;
+        }
+      }
+      a {
+        @include textStyle(400, 14px, 17px);
+        text-decoration: none;
+        color: #1a75e8;
+      }
+    }
+  }
+
+  & > button {
+    @include textStyle(400, 16px, 19px);
+    color: #ffffff;
+    background-color: #1a75e8;
+    border-radius: 5px;
+    padding: 15px 30px;
+    border: none;
+    margin: 30px auto 0;
+    margin-top: 15px;
+    display: flex;
+  }
+}

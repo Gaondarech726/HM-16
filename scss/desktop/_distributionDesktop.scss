@@ -1,0 +1,38 @@
+@media (min-width: 992px) {
+  .distribution {
+    width: auto;
+    height: 446px;
+    .sturcture {
+      .distribution-text {
+        padding-top: 90px;
+        margin-bottom: 90px;
+        h1 {
+          width: 460px;
+          height: 86px;
+          @include textStyle(900, 36px, 43px);
+          text-align: center;
+        }
+        & > p {
+          width: 460px;
+          height: 50px;
+          @include textStyle(400, 18px, 25px);
+          text-align: center;
+        }
+        form {
+          width: 447px;
+          height: 70px;
+        }
+        button {
+          width: 181px;
+          height: 49px;
+        }
+        button::after {
+          padding-left: 10px;
+          content: "Підписатися";
+          @include textStyle(400, 16px, 19px);
+          color: white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin textStyle($weight, $size, $line) {
+  font-family: "Fira Sans", sans-serif;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line;
+}
+
+@mixin BorderStyle($color, $width, $style, $radius) {
+  border: $width $style $color;
+  border-radius: $radius;
+}

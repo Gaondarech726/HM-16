@@ -1,0 +1,25 @@
+@media (min-width: 992px) {
+  footer {
+    height: 281px;
+    flex-direction: row;
+    & > ul {
+      @include flexCenter();
+      flex-direction: row;
+      text-align: left;
+      li:nth-of-type(1) {
+        width: 134px;
+        height: 114px;
+        padding-bottom: 0;
+        padding-right: 137px;
+      }
+      li:nth-of-type(2) {
+        padding-bottom: 0;
+        padding-right: 129px;
+      }
+    }
+    .logo-text {
+      padding-top: 111px;
+      padding-right: 162px;
+    }
+  }
+}

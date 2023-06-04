@@ -1,0 +1,76 @@
+footer {
+  margin-top: 50px;
+  height: 609px;
+  @include flexCenter();
+  flex-direction: column;
+  .logo-text {
+    padding-bottom: 30px;
+    @include flexCenter();
+    flex-direction: column;
+    text-align: center;
+    .description {
+      padding-top: 20px;
+      width: 196px;
+      height: 34px;
+      color: #b2b2b2;
+      @include textStyle(400, 12px, 17px);
+    }
+    .year {
+      padding-top: 10px;
+      width: 166px;
+      height: 17px;
+      @include textStyle(400, 12px, 17px);
+      color: #b2b2b2;
+    }
+  }
+  ul {
+    text-align: center;
+    & > li:nth-of-type(1) {
+      h2 {
+        @include textStyle(700, 16px, 19px);
+        padding-bottom: 15px;
+        color: #111238;
+      }
+      p {
+        @include textStyle(400, 16px, 19px);
+        color: #111238;
+      }
+      .number {
+        padding-bottom: 10px;
+      }
+      padding-bottom: 30px;
+    }
+    & > li:nth-of-type(2) {
+      h2 {
+        @include textStyle(700, 16px, 19px);
+        padding-bottom: 15px;
+        color: #111238;
+      }
+      p {
+        padding-bottom: 10px;
+        @include textStyle(400, 16px, 19px);
+        color: #111238;
+      }
+      .end-text {
+        padding: 0;
+      }
+      padding-bottom: 30px;
+    }
+    & > li:nth-of-type(3) {
+      h2 {
+        @include textStyle(700, 16px, 19px);
+        padding-bottom: 15px;
+        color: #111238;
+      }
+      p {
+        padding-bottom: 10px;
+        @include textStyle(400, 16px, 19px);
+        color: #111238;
+      }
+      .end-text {
+        padding: 0;
+      }
+    }
+  }
+  padding-bottom: 54px;
+}

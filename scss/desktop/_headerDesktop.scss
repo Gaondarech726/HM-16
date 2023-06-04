@@ -1,0 +1,70 @@
+@media (min-width: 992px) {
+  header {
+    .hero {
+      flex-direction: row;
+      width: 1132px;
+      justify-content: space-between;
+      margin: 0 auto;
+
+      img {
+        width: 544px;
+        height: 557px;
+      }
+
+      .hero-text {
+        align-items: start;
+        h2 {
+          width: 460px;
+          height: 106px;
+          @include textStyle(900, 44px, 53px);
+          text-align: left;
+          color: #111238;
+          padding-bottom: 15px;
+        }
+        p {
+          width: 460px;
+          height: 75px;
+          text-align: left;
+          @include textStyle(400, 18px, 25px);
+          color: #111238;
+          padding-bottom: 30px;
+        }
+        form {
+          display: flex;
+          align-items: start;
+          justify-content: center;
+          width: 447px;
+          height: 70px;
+
+          button {
+            width: 211px;
+            height: 49px;
+          }
+          & > button::after {
+            padding-left: 10px;
+            content: "Шукати ваканції";
+            @include textStyle(400, 16px, 19px);
+            color: white;
+          }
+        }
+        .example {
+          margin-bottom: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 345px;
+          height: 27px;
+          & > p {
+            width: 71px;
+            height: 3px;
+            padding-right: 15px;
+          }
+          & > ul {
+            width: 259px;
+            height: 27px;
+          }
+        }
+      }
+    }
+  }
+}
